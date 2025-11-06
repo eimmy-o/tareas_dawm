@@ -1,0 +1,30 @@
+body {
+    font-family: Montserrat, sans-serif;
+}
+nav a {
+    text-decoration: none ;
+    color: black ;
+}
+
+nav a:hover{
+    color: mediumpurple;
+}
+
+#onepiece h3{
+    color: blue; 
+}
+
+#haikyuu h3{
+    color: orangered; 
+}
+
+#bokunohero h3{
+    color: green; 
+}
+
+.poster img {
+    width: 250px;
+    height: 300px;
+    border:outset;
+    border-color: purple;
+}
