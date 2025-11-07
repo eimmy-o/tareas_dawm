@@ -177,17 +177,17 @@ body {
     }
 }
 
-/* 2. Breakpoint: Laptops/Escritorios Medianos (max-width: 992px) */
+/* Breakpoint: Laptops/Escritorios Medianos (max-width: 992px) */
 @media (max-width: 62rem) { /* 992px */
     
-    /* Reorganizar Tarjetas a 2 Columnas [cite: 52] */
+    /* Reorganizar Tarjetas a 2 Columnas */
     .item {
-        width: 40%; /* 2 tarjetas por fila (40*2 + 10*2 = 100) */
+        width: 40%; 
         margin: 1rem 5%; 
     }
 }
 
-/* 3. Breakpoint: Tablets (max-width: 768px) [cite: 45] */
+/* 3. Breakpoint: Tablets (max-width: 768px) */
 @media (max-width: 48rem) { /* 768px */
     
     /* Mostrar Botón/Label Hamburguesa */
@@ -222,9 +222,9 @@ body {
 
     /* Concepto CSS-Only: Cuando el checkbox está marcado, selecciona el hermano nav y lo muestra */
     .nav-toggle-input:checked ~ nav .nav-list {
-        display: block; /* Muestra el menú colapsado [cite: 50] */
+        display: block; /* Muestra el menú colapsado */
         opacity: 1;
-        /* Usar transition para que no aparezca de golpe (ej. en opacidad) [cite: 79] */
+        /* Usar transition para que no aparezca de golpe  */
         transition: opacity 0.5s ease;
     }
 
@@ -245,7 +245,7 @@ body {
     }
 }
 
-/* 4. Breakpoint: Móviles Pequeños (max-width: 480px) [cite: 46] */
+/* Breakpoint: Móviles Pequeños (max-width: 480px) */
 @media (max-width: 30rem) { /* 480px */
     
     /* Reorganizar Tarjetas a 1 Columna [cite: 52] */
