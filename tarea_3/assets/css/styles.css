@@ -1,0 +1,165 @@
+/* Import de la fuente */
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Selector Universal: Aplica el modelo de cajas Box Model 'border-box' a todos los elementos. 
+   Esto asegura que 'padding' y 'border' no aumenten el ancho/alto total. */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body {
+    font-family: Poppins, sans-serif; /* Aplico la feunte que importe a todo mi body */
+}
+
+nav {
+    margin: 1rem;
+    width: 100%;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover{
+    color: darkorchid;
+    transition: all 0.3s ease; /* Concepto: Uso de 'transition' para un efecto suave en el hover de los enlaces. */
+}
+
+#header_container {
+    position: fixed; /* Concepto: Posicionamiento 'fixed' para un encabezado que se mantiene visible al hacer scroll. */
+    margin: 0;
+    top: 0;         
+    width: 100%;     
+    z-index: 1000; /* Asegura que el header siempre esté por encima del contenido (superposición controlada). */
+    background-color: lavender;
+}
+
+/* ABOUT SECTION */
+
+#about .logo img {
+    width: 100px ;
+    height: 100px;
+}
+
+#about {
+    background-color: lavender;
+    align-content: center;
+    display: flex;
+}
+
+#about .logo {
+    margin: 2rem;
+    align-content: center;
+}
+
+#about .titles {
+    margin-left: 2rem;
+    align-content: center;
+}
+
+/* Compensación de margen superior para el contenido principal 
+   debido a la altura del header fijo. */
+
+#main_content {
+    margin-top: 17rem;
+}
+
+/* SECTIONS STYLES */
+#shonen, #shojo, #spokon, footer {
+    margin: 2rem;
+}
+
+.h4_title {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: purple;
+    /* Concepto: Posicionamiento 'sticky' para que el subtítulo se pegue 
+       (stick) al tope de la ventana mientras se hace scroll en la sección. */
+    position: sticky;
+    top: 14rem; /* Se pega justo debajo del header fijo */
+    z-index: 999; /* Por debajo del header, pero por encima de las tarjetas */
+}
+
+/* --- Maquetación (sin Flex/Grid) --- */
+
+.item img {
+    width: 200px ;
+    height: 300px;
+    margin-bottom: 2.5rem;
+}
+
+.galery {
+    display: inline-block;
+    gap: 2rem;
+}
+
+/* --- Modelo de Cajas y Posicionamiento Relative/Absolute --- */
+
+.item {
+    text-align: center;
+    padding: 1rem; /* Relleno: Espacio entre el contenido y el borde. */
+    border: 5px purple solid; /* Borde: Línea que rodea el relleno. */
+    background-color: lavender; /* Fondo: Color del área de contenido y relleno. */
+    box-shadow: 10px 10px 5px grey; /* Efecto visual: Sombra suave. */
+    
+    /* Concepto: Posicionamiento 'relative' para ser el contexto del botón absoluto interno. */
+    position: relative; 
+    
+    border-radius: 2.5rem; /* Efecto visual: Bordes redondeados. */
+    width: 300px ; /* Requisito: Ancho fijo para las tarjetas. */
+    margin-bottom: 1.5rem; /* Margen: Espacio fuera del borde. */
+    
+    /* Concepto: Uso de 'display: inline-block' para alinear las tarjetas horizontalmente. */
+    display: inline-block; 
+    margin-right: 2rem;
+    transition: all 0.3s ease-in-out; /* Prepara la transición para el hover. */
+}
+
+.item:hover{
+    /* Concepto: Efecto 'hover' con transición de fondo y sombra suave. */
+    background-color: thistle;
+    box-shadow: 5px 5px 15px purple;
+}
+
+.item p {
+    text-align: center;
+    padding: 1rem;
+    font-style: italic;
+}
+
+/* --- Posicionamiento Absolute --- */
+
+.btn_more {
+    padding: 0.5rem 1rem;
+    background-color: mediumpurple;
+    color: white;
+    border: purple solid 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px grey;
+    
+    /* Concepto: Posicionamiento 'absolute'. El elemento se saca del flujo normal 
+       y se posiciona respecto a su contenedor relativo (.item). */
+    position: absolute; 
+    
+    /* Posicionamiento: Se ubica a 10px del borde inferior de la tarjeta. */
+    bottom: 10px; 
+    
+    /* Posicionamiento: Centrado horizontalmente dentro del contenedor 'item'. */
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+.btn_more:hover {
+    background-color: rebeccapurple;
+    /* Concepto: Transición y hover en el botón para un efecto de clic visual. */
+    transition: all 0.3s ease; 
+    box-shadow: 1px 1px 5px purple;
+}
+
