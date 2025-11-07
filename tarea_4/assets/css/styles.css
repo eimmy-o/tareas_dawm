@@ -1,0 +1,270 @@
+/* Import de la fuente */
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Selector Universal: Aplica el modelo de cajas Box Model 'border-box' a todos los elementos. 
+   Esto asegura que 'padding' y 'border' no aumenten el ancho/alto total. */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 16px; 
+}
+
+
+body {
+    font-family: Poppins, sans-serif; /* Aplico la feunte que importe a todo mi body */
+}
+
+/* Ocultar elementos del menú móvil en escritorio */
+.nav-toggle-input, .menu-toggle-label {
+    display: none; 
+}
+
+/* Navegación Horizontal (Escritorio/Base) */
+.nav-list {
+    display: block; 
+    text-align: right;
+    padding: 0.5rem 0; 
+}
+.nav-list a{
+    text-decoration: none;
+    color: black;
+    padding: 0 0.5rem; 
+    transition: all 0.3s ease;
+}
+
+#header_container {
+    position: fixed; /* Concepto: Posicionamiento 'fixed' para un encabezado que se mantiene visible al hacer scroll. */
+    margin: 0;
+    top: 0;         
+    width: 100%;     
+    z-index: 1000; /* Asegura que el header siempre esté por encima del contenido (superposición controlada). */
+    background-color: lavender;
+}
+
+/* ABOUT SECTION */
+
+#about .logo img {
+    width: 100px ;
+    height: 100px;
+}
+
+#about {
+    background-color: lavender;
+    align-content: center;
+    display: flex;
+}
+
+#about .logo {
+    margin: 2rem;
+    align-content: center;
+}
+
+#about .titles {
+    margin-left: 2rem;
+    align-content: center;
+}
+
+/* Compensación de margen superior para el contenido principal 
+   debido a la altura del header fijo. */
+
+#main_content {
+    margin-top: 17rem;
+}
+
+/* SECTIONS STYLES */
+#shonen, #shojo, #spokon, footer {
+    margin: 2rem;
+}
+
+.h4_title {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: purple;
+    /* Concepto: Posicionamiento 'sticky' para que el subtítulo se pegue 
+       (stick) al tope de la ventana mientras se hace scroll en la sección. */
+    position: sticky;
+    top: 14rem; /* Se pega justo debajo del header fijo */
+    z-index: 999; /* Por debajo del header, pero por encima de las tarjetas */
+}
+
+/* --- Maquetación (sin Flex/Grid) --- */
+
+.item img {
+/* Dimensiones en REM  */
+    width: 12.5rem; 
+    height: 18.75rem;
+    margin-bottom: 2rem;
+}
+
+.galery {
+    text-align: center;
+    overflow: hidden;
+}
+
+/* --- Modelo de Cajas y Posicionamiento Relative/Absolute --- */
+
+.item {
+    /* Ancho en % para diseño flexible (Requisito: unidades relativas)  */
+    width: 25%; 
+    float: left;
+    margin: 1.5rem 4%; 
+    
+    /* Box Model y Posicionamiento de Tarea 3 */
+    padding: 1rem; 
+    border: 0.3125rem purple solid; 
+    box-shadow: 0.625rem 0.625rem 0.3125rem grey; 
+    position: relative; 
+    border-radius: 2.5rem; 
+    display: inline-block; /* Se mantiene para maquetación sin flex/grid */
+    transition: all 0.3s ease-in-out;
+}
+
+.item:hover{
+    /* Concepto: Efecto 'hover' con transición de fondo y sombra suave. */
+    background-color: thistle;
+    box-shadow: 5px 5px 15px purple;
+}
+
+.item p {
+    text-align: center;
+    padding: 1rem;
+    font-style: italic;
+}
+
+/* --- Posicionamiento Absolute --- */
+
+.btn_more {
+    padding: 0.5rem 1rem;
+    background-color: mediumpurple;
+    color: white;
+    border: purple solid 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px grey;
+    
+    /* Concepto: Posicionamiento 'absolute'. El elemento se saca del flujo normal 
+       y se posiciona respecto a su contenedor relativo (.item). */
+    position: absolute; 
+    
+    /* Posicionamiento: Se ubica a 10px del borde inferior de la tarjeta. */
+    bottom: 10px; 
+    
+    /* Posicionamiento: Centrado horizontalmente dentro del contenedor 'item'. */
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+.btn_more:hover {
+    background-color: rebeccapurple;
+    /* Concepto: Transición y hover en el botón para un efecto de clic visual. */
+    transition: all 0.3s ease; 
+    box-shadow: 1px 1px 5px purple;
+}
+
+/* --- MEDIA QUERIES (REQUISITOS DE BREAKPOINTS)  --- */
+
+/* 1. Breakpoint: Escritorios Amplios (max-width: 1200px) */
+@media (max-width: 75rem) { /* 1200px */
+    .item {
+        width: 27%;
+        margin: 1.5rem 3%;
+    }
+}
+
+/* 2. Breakpoint: Laptops/Escritorios Medianos (max-width: 992px) */
+@media (max-width: 62rem) { /* 992px */
+    
+    /* Reorganizar Tarjetas a 2 Columnas [cite: 52] */
+    .item {
+        width: 40%; /* 2 tarjetas por fila (40*2 + 10*2 = 100) */
+        margin: 1rem 5%; 
+    }
+}
+
+/* 3. Breakpoint: Tablets (max-width: 768px) [cite: 45] */
+@media (max-width: 48rem) { /* 768px */
+    
+    /* Mostrar Botón/Label Hamburguesa */
+    .menu-toggle-label {
+        display: block; 
+        float: right;
+        margin: 1rem;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 1001;
+        transition: all 0.3s ease;
+    }
+    
+    /* Ocultar el menú horizontal y preparar el menú vertical (colapsado) */
+    .nav-list {
+        display: none; 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: lavender;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    
+    /* Estilo de los enlaces en el menú vertical */
+    .nav-list a {
+        display: block; 
+        padding: 0.8rem 0;
+        border-bottom: 1px solid thistle;
+    }
+
+    /* Concepto CSS-Only: Cuando el checkbox está marcado, selecciona el hermano nav y lo muestra */
+    .nav-toggle-input:checked ~ nav .nav-list {
+        display: block; /* Muestra el menú colapsado [cite: 50] */
+        opacity: 1;
+        /* Usar transition para que no aparezca de golpe (ej. en opacidad) [cite: 79] */
+        transition: opacity 0.5s ease;
+    }
+
+    /* Header: Apilar elementos en tablet/móvil */
+    #about {
+        flex-direction: column; 
+        text-align: center;
+    }
+    #about .logo, #about .titles {
+        margin: 0.5rem auto;
+    }
+
+    #main_content {
+        margin-top: 17rem; /* Más espacio para el header apilado */
+    }
+    .h4_title {
+        top: 15.5rem;
+    }
+}
+
+/* 4. Breakpoint: Móviles Pequeños (max-width: 480px) [cite: 46] */
+@media (max-width: 30rem) { /* 480px */
+    
+    /* Reorganizar Tarjetas a 1 Columna [cite: 52] */
+    .item {
+        width: 80%; 
+        margin: 1rem 10%; 
+        float: none; 
+        display: block;
+    }
+    
+    /* Ajustes de tipografía */
+    html {
+        font-size: 14px;
+    }
+    
+    #main_content {
+        margin-top: 14rem;
+    }
+    .h4_title {
+        top: 12.5rem;
+    }
+}
