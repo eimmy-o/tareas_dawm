@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    
+    <!-- METADATOS -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Eimmy Ochoa">
+    <meta name="viewport" content="width=device-witdth , initial-scale=1.0">
+    
+    <!-- TITULO e ICONO -->
+    <title>Tarea 5</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/png" href="assets/imgs/logo_yo.png">
+    
+</head>
+    
+<body>
+    <nav>
+        <a href="#recomendations">Recomendations | </a>
+        <a href="#colores">Colors | </a>
+        <a href="#whatched">Whatched |</a>
+        <a href="#lookup">Look up </a>
+    </nav>
+    <hr>
+    
+    <header id="about">
+        <div class="logo">
+            <img src="assets/imgs/logo_yo.png" alt="Logo propio">
+        </div>
+
+        <div class="titles">
+            <h1>Tarea 5</h1>
+            <h3>Basado en la lectura del pdf Clase_S05_JavaScript</h3>
+        </div>
+
+    </header>
+    <hr>
+    
+    <main>
+        <section id="recomendations">
+            <h3>Yo recomiendo ver:</h3>
+            <p id="parrafo-interactivo">One Piece</p>
+
+            <button class="btn-accion">Otra Recomendacion</button>
+        </section>
+        <hr>
+
+        <section id="colores">
+            <h3>Me gusta mucho el color:</h3>
+            
+            <div id="contenedor-color" class="contenedor-color"></div>
+
+            <button class="btn-accion">Otro color</button>
+        </section>
+        <hr>
+
+        <section id="whatched">
+            <h3>Animes que he visto:</h3>
+
+            <form>
+                <select>
+                    <option>Seleccion una categoria</option>
+                    <option value="shonen">Shonen</option>
+                    <option value="spokon">Spokon</option> 
+                    <option value="shojo">Shojo</option>
+                </select>
+            </form>
+            <div id="lista-animes">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+        <hr>
+
+        <section id="lookup">
+            <h3>Look up an anime:</h3>
+            
+            <label for="input-teclado">Escribe aquí:</label>
+            <input type="text" id="input-teclado" placeholder="Escribe el nombre de un anime">
+
+            <p>Resultado en tiempo real:</p>
+            <div id="output-teclado">... Lo que escribes aparecerá aquí ...</div>
+        </section>
+    
+    </main>
+    <hr>
+    
+    <footer>
+        <p>Desarrollado por Eimmy Ochoa - Copyright &copy; 2024</p>
+        <p>Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

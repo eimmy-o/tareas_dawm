@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box ;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+}
+
+nav {
+    margin: 1rem;
+}
+
+nav a {
+    text-decoration: none ;
+    color: black ;
+    transition: 0.3s all ease-in-out;
+}
+
+nav a:hover{
+    color: mediumpurple;
+    transition: 0.3s all ease-in-out;
+}
+
+#about .logo img {
+    width: 100px ;
+    height: 100px;
+}
+
+#about {
+    background-color: lavender;
+    align-content: center;
+    display: flex;
+}
+
+#about .logo {
+    margin: 2rem;
+    align-content: center;
+}
+
+#about .titles {
+    margin-left: 2rem;
+    align-content: center;
+}
+
+#recomendations, #colores, #whatched, #lookup, footer{
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.contenedor-color {
+    width: 10rem; 
+    height: 10rem;
+    margin: 1rem 0;
+    background-color: white; 
+    border: 3px solid purple;
+    transition: all 0.3s ease-in-out; 
+}
+
+
+.btn-accion {
+    padding: 0.5rem 1rem;
+    background-color: mediumpurple; 
+    color: white;
+    border: 3px solid purple;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
+.btn-accion:hover {
+    background-color: #483d8b;
+}
+
+
+#output-teclado {
+    min-height: 2rem; 
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px dashed mediumpurple;
+    background-color: lavenderblush;
+}
+
+
+#lista-animes {
+    margin-top: 1rem;
+    list-style-type: none; 
+    padding-left: 0;
+}
+#lista-animes li {
+    padding: 0.25rem 0;
+    border-bottom: 1px dotted #ccc;
+}
