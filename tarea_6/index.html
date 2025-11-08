@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    
+    <!-- METADATOS -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Eimmy Ochoa">
+    <meta name="viewport" content="width=device-witdth , initial-scale=1.0">
+    
+    <!-- TITULO e ICONO -->
+    <title>Tarea 6</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/png" href="assets/imgs/logo_yo.png">
+    
+</head>
+    
+<body>
+    <nav>
+        <a href="#about">About | </a>
+        <a href="#calculadora">Calculadora | </a>
+        <a href="#registro">Registro |</a>
+        <a href="#fechas">Fechas</a>
+    </nav>
+    <hr>
+    
+    <header id="about">
+        <div class="logo">
+            <img src="assets/imgs/logo_yo.png" alt="Logo propio">
+        </div>
+
+        <div class="titles">
+            <h1>Tarea 6</h1>
+            <h3>Basado en la lectura del pdf Clase_S06_01_Controles_Formularios</h3>
+        </div>
+
+    </header>
+    <hr>
+    
+    <main>
+        <section id="calculadora">
+            <h3>Calculadora Simple</h3>
+            <p>Suma, resta, multiplica y divide dos números.</p>
+
+            <input type="number" id="num1" placeholder="Número 1" class="calc-input">
+            <input type="number" id="num2" placeholder="Número 2" class="calc-input">
+            <br><br>
+
+            <div class="calc-buttons">
+                <button id="btnSumar" class="btn-accion">+</button>
+                <button id="btnRestar" class="btn-accion">-</button>
+                <button id="btnMultiplicar" class="btn-accion">x</button>
+                <button id="btnDividir" class="btn-accion">÷</button>
+            </div>
+
+            <h4>Resultado: <span id="resultadoCalculadora">0</span></h4>
+            <p id="mensajeCalculadora" class="error-msg"></p> 
+        </section>
+        <hr>
+
+        <section id="registro">
+            <h3>Formulario de Registro</h3>
+            <form id="registroForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre (Min 3):</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control">
+                    <p id="errorNombre" class="error-msg"></p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" class="form-control">
+                    <p id="errorCorreo" class="error-msg"></p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contrasena">Contraseña (Min 6):</label>
+                    <input type="password" id="contrasena" name="contrasena" class="form-control">
+                    <p id="errorContrasena" class="error-msg"></p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" class="form-control">
+                </div>
+                
+                <button type="submit" class="btn-accion">Registrar</button>
+
+                <p id="mensajeGlobal" class="success-msg"></p>
+            </form>
+        </section>
+        <hr>
+        
+        <section id="fechas">
+            <h2>Cálculo de Días Vívidos</h2>
+            <p>Han pasado: <span id="diasDiferencia" style="font-weight: bold;">--</span> desde que naciste</p>
+        </section>
+    </main>
+
+    <hr>
+    
+    <footer>
+        <p>Desarrollado por Eimmy Ochoa - Copyright &copy; 2024</p>
+        <p>Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
