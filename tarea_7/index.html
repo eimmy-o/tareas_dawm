@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    
+    <!-- METADATOS -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Eimmy Ochoa">
+    <meta name="viewport" content="width=device-witdth , initial-scale=1.0">
+    
+    <!-- TITULO e ICONO -->
+    <title>Tarea 7</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/png" href="assets/imgs/logo_yo.png">
+    
+</head>
+    
+<body>
+    <nav>
+        <a href="#about">About | </a>
+        <a href="#cargar">Cargar Datos | </a>
+        <a href="#contenido">Contenido Cargado |</a>
+        <a href="#foot">Footer</a>
+    </nav>
+    <hr>
+    
+    <header id="about">
+        <div class="logo">
+            <img src="assets/imgs/logo_yo.png" alt="Logo propio">
+        </div>
+
+        <div class="titles">
+            <h1>Tarea 7</h1>
+            <h3>Basado en la lectura del pdf Clase_S06_02_AJAX</h3>
+        </div>
+
+    </header>
+    <hr>
+    
+    <main>
+        <section id="ajax-data-loader">
+            <div id="cargar">
+                <h3>Carga de Recursos Asíncronos (AJAX)</h3>
+                <p>Presiona el botón para cargar un catálogo de videojuegos desde un archivo JSON local, sin recargar la página.</p>
+
+                <button id="btnCargarDatos" class="btn-accion">Cargar Datos de Videojuegos</button>
+            </div>
+            <hr>
+
+            <div id="contenido">
+                <h3>Contenido Dinámico:</h3>
+
+                <div id="contenedorDatos" class="data-container">
+                    <p>Esperando el clic...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <hr>
+    
+    <footer id="foot">
+        <p>Desarrollado por Eimmy Ochoa - Copyright &copy; 2024</p>
+        <p>Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

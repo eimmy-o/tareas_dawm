@@ -1,0 +1,10 @@
+{
+    "titulo": "Catálogo de Videojuegos",
+    "descripcion": "Estos son los juegos disponibles que tenemos:",
+    "juegos": [
+        {"nombre": "Elden Ring", "genero": "RPG", "lanzamiento": 2022},
+        {"nombre": "Hades", "genero": "Roguelike", "lanzamiento": 2020},
+        {"nombre": "Stardew Valley", "genero": "Simulación", "lanzamiento": 2016}
+    ],
+    "version": "1.0"
+}
